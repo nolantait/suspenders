@@ -2,11 +2,6 @@ require_relative "base"
 
 module Suspenders
   class StylelintGenerator < Generators::Base
-    def setup_hound
-      action InvokeGenerator.new(self, "suspenders:lint")
-      action ToggleComments.new(self, ".hound.yml", /stylelintrc/)
-    end
-
     def install_stylelint
       dependencies = ["stylelint", "@thoughtbot/stylelint-config"]
       action YarnInstall.new(self, dependencies, "--dev")

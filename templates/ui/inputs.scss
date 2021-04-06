@@ -1,0 +1,33 @@
+.ui-switch {
+  @apply relative block w-12 h-6 rounded-lg z-50;
+
+  > input {
+    @apply opacity-0 h-0 w-0;
+  }
+}
+
+.ui-switch__slider {
+  @apply absolute cursor-pointer inset-0 bg-gray-300 rounded-lg;
+
+  &:before {
+    @apply absolute w-4 bg-white duration-300 rounded h-4 bottom-1 left-1;
+    content: '';
+  }
+}
+
+.ui-switch__label {
+  @apply absolute whitespace-nowrap text-xs w-32;
+  bottom: 34px;
+}
+
+input:checked + .ui-switch__slider {
+  @apply bg-primary;
+}
+
+input:focus + .ui-switch__slider {
+  @apply shadow-sm;
+}
+
+input:checked + .ui-switch__slider:before {
+  transform: translateX(1.5rem);
+}

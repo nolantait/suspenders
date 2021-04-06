@@ -1,0 +1,89 @@
+.ui-table {
+  > header {
+    @apply flex flex-row justify-between items-center pb-2;
+
+    > nav {
+      @apply flex flex-row justify-end items-center ml-auto;
+    }
+  }
+
+  caption {
+    @apply bg-gray-100 px-6 pt-2 text-gray-500 text-left;
+  }
+
+  table {
+    @apply table-fixed border-collapse my-2 text-left mx-0 overflow-x-auto
+    mx-auto w-full border-t border-l border-r;
+  }
+
+  tbody {
+    @apply bg-white align-middle;
+  }
+
+  th {
+    @apply bg-gray-100 font-semibold text-gray-700 text-left border-b
+    text-xs leading-4 font-medium uppercase tracking-wider space-x-1;
+  }
+
+  th, td {
+    @apply py-4 px-6;
+  }
+
+  tr {
+    @apply border-b;
+  }
+
+  tr.selected {
+  }
+
+  tr.unselected {
+    @apply bg-gray-50;
+
+    td {
+      @apply text-gray-500;
+
+      span.positive,
+      span.negative {
+        @apply text-gray-500;
+      }
+    }
+  }
+
+  td {
+    @apply border-b;
+  }
+}
+
+.ui-table--horizontal {
+  tr {
+    th {
+      @apply text-right;
+
+      &:first-child {
+        @apply text-left;
+      }
+    }
+
+    td {
+      @apply text-right;
+
+      &:first-child {
+        @apply text-left;
+      }
+    }
+  }
+}
+
+.ui-table--auto {
+  table {
+    @apply table-auto;
+  }
+}
+
+.ui-table--vertical {
+  tbody {
+    th {
+      @apply border-r;
+    }
+  }
+}

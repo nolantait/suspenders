@@ -1,0 +1,16 @@
+article.ui-progress-bar {
+  @apply w-full relative flex flex-col items-center justify-between;
+
+  > div {
+    @apply w-full inline-block relative bg-gray-500 rounded-full h-4
+    align-middle;
+
+    > div {
+      @apply h-4 align-middle rounded-full bg-success;
+    }
+  }
+
+  > header {
+    @apply absolute inset-0 text-white font-bold;
+  }
+}

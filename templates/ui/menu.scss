@@ -1,0 +1,52 @@
+nav.ui-menu {
+  @apply bg-white border shadow rounded inline-block z-50
+  relative;
+
+  a {
+    @apply block w-full;
+  }
+
+  > header {
+    @apply p-2 text-gray-700;
+  }
+
+  div.ui-submenu__header {
+    @apply flex flex-row justify-between items-center space-x-4 pr-4 bg-white;
+
+    li.ui-menu__item {
+      &:hover {
+        @apply bg-white text-current;
+      }
+    }
+  }
+
+  li.ui-submenu {
+    @apply bg-gray-200;
+  }
+
+  ul {
+    li.ui-menu__item--depth-0 {
+      @apply px-4;
+    }
+
+    li.ui-menu__item--depth-1 {
+      @apply px-8;
+    }
+
+    li.ui-menu__item--depth-2 {
+      @apply px-12;
+    }
+
+    li.ui-menu__item--depth-3 {
+      @apply px-16;
+    }
+
+    li.ui-menu__item {
+      @apply transition-all duration-200 py-2 cursor-pointer;
+
+      &:hover {
+        @apply bg-primary text-white;
+      }
+    }
+  }
+}

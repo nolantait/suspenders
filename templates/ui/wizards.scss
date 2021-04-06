@@ -1,0 +1,15 @@
+.ui-wizard {
+  @apply space-y-8;
+}
+
+.ui-wizard__content:not(.hidden) {
+  @apply grid justify-center items-center p-16 bg-gray-400;
+}
+
+.ui-wizard__content.hidden {
+  display: none !important;
+}
+
+.ui-wizard__controls {
+  @apply flex flex-row justify-start items-center space-x-4;
+}

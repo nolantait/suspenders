@@ -1,0 +1,51 @@
+ol.ui-timeline {
+  @apply space-y-4;
+
+  a {
+    @apply transition-all duration-200;
+
+    &:hover, &:focus {
+      @apply text-primary underline;
+    }
+  }
+}
+
+article.ui-timeline-activity {
+  > header {
+    @apply flex flex-row items-start justify-start;
+
+    i {
+      @apply mr-2 mt-1;
+    }
+  }
+}
+
+article.ui-timeline-activity--failed {
+  a.ui-timeline-activity__link {
+    @apply text-red-500;
+  }
+}
+
+article.ui-timeline-activity--pending {
+  a.ui-timeline-activity__link {
+    @apply text-gray-700;
+  }
+}
+
+article.ui-timeline-activity--started {
+  a.ui-timeline-activity__link {
+    @apply text-gray-900;
+  }
+}
+
+article.ui-timeline-activity--completed {
+  a.ui-timeline-activity__link {
+    @apply text-success;
+  }
+}
+
+article.ui-timeline-activity--current {
+  a.ui-timeline-activity__link {
+    @apply text-primary;
+  }
+}

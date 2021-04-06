@@ -1,0 +1,15 @@
+nav.ui-pagination {
+  @apply flex flex-row justify-start items-center space-x-2;
+}
+
+ul.ui-pagination__window {
+  @apply space-x-2;
+
+  li {
+    @apply inline-block;
+  }
+}
+
+a.ui-pagination__page--current {
+  @apply border-primary text-primary;
+}

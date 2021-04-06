@@ -1,7 +1,38 @@
-@charset "utf-8";
+@charset 'utf-8';
+$large-screen: 640px;
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
-@import "normalize.css/normalize";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
 
-@import "bourbon";
+@import 'ui/typography';
+@import 'ui/buttons';
+@import 'ui/breadcrumbs';
+@import 'ui/page_header';
+@import 'ui/menu';
+@import 'ui/dropdown';
+@import 'ui/pagination';
+@import 'ui/steps';
+@import 'ui/wizards';
+@import 'ui/cards';
+@import 'ui/descriptive_lists';
+@import 'ui/lists';
+@import 'ui/tables';
+@import 'ui/empty';
+@import 'ui/collapse';
+@import 'ui/tooltips';
+@import 'ui/notifications';
+@import 'ui/style_guide';
 
-@import "base/base";
+@import 'ui/top_bars';
+@import 'ui/timestamps';
+@import 'ui/sidebars';
+@import 'ui/tabs';
+@import 'ui/inputs';
+@import 'ui/tags';
+@import 'ui/statistics';
+@import 'ui/forms';
+@import 'ui/timelines';
+@import 'ui/progress_bars';
+
+@import 'tailwindcss/utilities';

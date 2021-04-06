@@ -1,0 +1,119 @@
+.ui-steps {
+  @apply relative overflow-hidden;
+}
+
+.ui-steps--horizontal {
+  > ul {
+    @apply flex flex-row justify-between items-start space-x-4;
+  }
+
+  .ui-step__header {
+    &:after {
+      content: '';
+      @apply bg-primary absolute;
+      height: 1px;
+      top: 16px;
+      z-index: -1;
+      width: 9999px;
+    }
+  }
+}
+
+.ui-steps--vertical {
+  > ul {
+    @apply flex flex-col justify-start items-start space-y-4;
+  }
+
+  .ui-step__header {
+    &:after {
+      content: '';
+      @apply bg-primary absolute;
+      height: 9999px;
+      top: 16px;
+      left: 30px;
+      z-index: -1;
+      width: 1px;
+    }
+  }
+}
+
+
+.ui-step {
+  @apply grid gap-2 relative bg-white px-4;
+  grid-template-columns: 32px auto;
+  grid-template-areas:
+  'icon header'
+  'icon description';
+  z-index: 1;
+
+  .ui-step__description {
+    grid-area: description;
+  }
+
+  .ui-step__icon {
+    grid-area: icon;
+  }
+}
+
+.ui-step__header {
+  @apply flex flex-row justify-start items-center space-x-4 pt-1 bg-white
+  inline-block w-min pr-2;
+  grid-area: header;
+  line-height: 1;
+}
+
+.ui-step__icon {
+  @apply rounded-full inline-block w-9 h-9 text-center
+  font-bold text-lg align-middle border
+  bg-white border-primary text-primary;
+  line-height: theme('spacing.9');
+  grid-area: icon;
+}
+
+.ui-step__title {
+  @apply text-lg whitespace-nowrap;
+}
+
+.ui-step__subtitle {
+  @apply text-gray-500 whitespace-nowrap;
+}
+
+.ui-step__description {
+  @apply text-gray-500;
+}
+.ui-step--last {
+  > .ui-step__header {
+    &:after {
+      width: 0px;
+      height: 0px;
+    }
+  }
+}
+
+.ui-step--waiting {
+  > .ui-step__header {
+    @apply text-gray-500;
+  }
+
+  .ui-step__icon {
+    @apply bg-white text-gray-500 border-gray-500;
+  }
+}
+
+.ui-step--current {
+  .ui-step__icon {
+    @apply bg-primary text-white border-primary;
+  }
+}
+
+.ui-step--error {
+  > .ui-step__header,
+    .ui-step__description,
+    .ui-step__subtitle {
+    @apply text-red-500;
+  }
+
+  .ui-step__icon {
+    @apply bg-white text-red-500 border-red-500;
+  }
+}

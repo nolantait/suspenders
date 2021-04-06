@@ -1,0 +1,7 @@
+.ui-timestamp {
+  @apply text-gray-400;
+
+  > time {
+    @apply font-semibold;
+  }
+}

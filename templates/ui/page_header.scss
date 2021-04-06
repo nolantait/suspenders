@@ -1,0 +1,24 @@
+.ui-page-header {
+  @apply space-y-4;
+
+  > header {
+    @apply flex flex-row justify-start items-center space-x-2;
+
+    > hgroup {
+      @apply flex flex-row justify-start items-center space-x-2
+      whitespace-nowrap;
+
+      > h1 {
+        @apply text-xl font-semibold;
+      }
+
+      > h2 {
+        @apply text-base text-gray-400;
+      }
+    }
+
+    > nav {
+      @apply flex flex-row justify-end items-center space-x-2 w-full block;
+    }
+  }
+}

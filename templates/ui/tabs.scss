@@ -1,0 +1,39 @@
+.ui-tab {
+  @apply flex flex-row;
+}
+
+.ui-tab__item {
+  .ui-tab__wrapper {
+    @apply py-1 px-4 bg-white shadow-sm border
+    block text-center divide-x;
+
+    &:hover {
+      @apply bg-primary text-white transition duration-200;
+    }
+  }
+
+  label {
+    @apply m-0 font-semibold;
+  }
+
+  input[type=radio] {
+    @apply hidden;
+  }
+
+  input[type=radio]:checked ~ .ui-tab__wrapper {
+    @apply bg-blue-100 text-blue-600 border-blue-600 border shadow-none
+    shadow-inner;
+  }
+
+  &:nth-child(2) {
+    .ui-tab__wrapper {
+      @apply rounded-l;
+    }
+  }
+
+  &:last-child {
+    .ui-tab__wrapper {
+      @apply border-r rounded-r;
+    }
+  }
+}

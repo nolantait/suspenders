@@ -1,0 +1,15 @@
+.ui-empty {
+  @apply w-full p-16 space-y-4 grid justify-center items-center;
+
+  img, i, svg {
+    @apply block mx-auto text-gray-400;
+  }
+
+  img {
+    @apply w-32 h-auto;
+  }
+
+  figcaption {
+    @apply max-w-screen-sm mx-auto space-y-4 text-center text-lg text-gray-400;
+  }
+}

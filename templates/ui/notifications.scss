@@ -1,0 +1,20 @@
+.ui-notification:not(.hidden) {
+  @apply px-6 py-4 bg-white border rounded-lg shadow-xl flex flex-row justify-start
+  items-start absolute top-6 right-6;
+}
+
+.ui-notification__close {
+  @apply absolute top-0 right-0 text-gray-400;
+}
+
+.ui-notification__content {
+  @apply relative;
+}
+
+.ui-notification__icon {
+  @apply mr-4 mt-1;
+}
+
+.ui-notification__actions {
+  @apply mt-4;
+}

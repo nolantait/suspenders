@@ -1,0 +1,7 @@
+.ui-dropdown {
+  @apply relative inline-block;
+}
+
+.ui-dropdown__expandable {
+  @apply absolute;
+}

@@ -1,0 +1,20 @@
+.ui-card {
+  @apply border bg-white shadow-sm rounded-lg overflow-hidden;
+
+  .ui-actions {
+    @apply border-t divide-x;
+
+    a.button {
+      @apply py-3 px-6;
+    }
+  }
+}
+
+.ui-card__header {
+  @apply px-6 py-3 border-b-2 flex flex-row justify-between items-center text-lg
+  bg-gray-600 text-white border-gray-700 shadow;
+}
+
+.ui-card__content {
+  @apply p-6;
+}

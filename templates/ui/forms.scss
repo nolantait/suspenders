@@ -1,0 +1,208 @@
+main {
+  > form {
+    @apply max-w-screen-sm mx-auto space-y-6;
+  }
+}
+
+form {
+  > nav {
+    @apply mt-6;
+  }
+}
+
+div.nested-fields {
+  @apply space-y-6;
+}
+
+input.disabled {
+  @apply bg-gray-200;
+}
+
+form.full-width {
+  @apply max-w-none;
+}
+
+label.boolean {
+  @apply whitespace-nowrap;
+}
+
+form.search {
+  @apply max-w-full mx-auto mb-4;
+
+  div.input {
+    margin-bottom: 0 !important;
+  }
+
+  div.input-row {
+    margin-bottom: 0 !important;
+  }
+
+  input[type=submit] {
+    margin-bottom: 0 !important;
+  }
+}
+
+form.horizontal {
+  @apply flex flex-row justify-end items-center mr-0 space-y-0;
+
+  div.input {
+    @apply mb-0;
+
+    input:first-child {
+      @apply m-0 rounded-l rounded-r-none;
+    }
+  }
+
+  input:last-child {
+    @apply rounded-r rounded-l-none;
+  }
+}
+
+fieldset {
+  @apply rounded shadow bg-white p-8 pb-12 relative border space-y-6;
+
+  fieldset {
+    @apply shadow-sm;
+  }
+
+  .remove-link {
+    @apply text-red-500;
+
+    &:before {
+      content: '—';
+      @apply px-2 text-dark;
+    }
+  }
+}
+
+.input--inline {
+  @apply m-0;
+}
+
+[type="color"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+[type="currency"],
+input:not([type]),
+textarea {
+  @apply bg-white border rounded shadow-sm px-4 py-2
+  w-full;
+}
+
+.input {
+  @apply w-full;
+}
+
+.input.triggered_radio_buttons {
+  @apply mb-0;
+}
+
+.input-row {
+  @apply clear-both;
+
+  @screen lg {
+    @apply flex flex-row items-end;
+
+    > .input {
+      @apply ml-4 mb-0;
+
+      &:first-child {
+        @apply ml-0;
+      }
+    }
+  }
+}
+
+input.currency {
+  @apply rounded-l-none;
+}
+
+input.duration,
+input.percentage {
+  @apply rounded-r-none pr-1;
+}
+
+select {
+  @apply w-full border pl-4 pr-8 py-2 appearance-none bg-no-repeat
+  bg-white;
+  background-size: 24px;
+  background-image: url(chevron-down.svg);
+  background-position: 95%;
+}
+
+span.radio,
+span.checkbox {
+  label {
+    @apply font-normal m-0;
+
+    input {
+      @apply mr-2;
+    }
+  }
+}
+
+.input.boolean {
+  @apply flex flex-row items-center justify-start;
+
+  label {
+    @apply mr-4;
+  }
+}
+
+.error {
+  @apply text-red-500 block;
+}
+
+.hint {
+  @apply text-gray-700;
+}
+
+legend.ui-form__legend {
+  @apply space-y-2 float-left mb-6;
+
+  > header {
+    @apply flex flex-row items-center;
+
+    > h5 {
+      @apply font-bold ml-1;
+    }
+  }
+}
+
+legend.ui-form__legend + * {
+  @apply clear-both mt-12;
+}
+
+label {
+  @apply block font-normal text-gray-800 mb-1;
+}
+
+abbr[title] {
+  @apply no-underline text-red-500;
+}
+
+span.currency {
+  @apply leading-9 border border-r-0 rounded px-4 rounded 
+  align-middle font-bold text-gray-600 rounded-r-none shadow-sm bg-gray-100
+}
+
+span.hint {
+  @apply mt-1 text-gray-600 block;
+}
+
+.triggered-fields {
+  .input-row {
+    @apply mb-6;
+  }
+}

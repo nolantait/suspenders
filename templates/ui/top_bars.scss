@@ -1,0 +1,66 @@
+.ui-top-bar {
+  @apply grid grid-cols-2 items-start py-3 px-4 mb-4;
+  grid-template-areas:
+  'logo bars'
+  'navigation navigation'
+  'breadcrumbs breadcrumbs';
+
+  @screen lg {
+    grid-template-areas:
+    'breadcrumbs navigation';
+  }
+
+  > a#logo {
+    grid-area: logo;
+  }
+
+  > hgroup {
+    grid-area: breadcrumbs;
+  }
+
+  > span.ui-top-bar__extend-button {
+    margin-left: auto;
+    grid-area: bars;
+  }
+
+  > div#top-bar-links {
+    grid-area: navigation;
+
+    nav {
+      @apply flex flex-col items-start justify-start space-y-4 space-x-0 pb-8
+      lg:flex-row lg:items-center lg:justify-end lg:space-y-0 lg:space-x-4 lg:pb-0
+      transition-all duration-200 lg:ml-auto;
+    }
+  }
+}
+
+.ui-top-bar--bare {
+  grid-template-areas:
+  'logo bars'
+  'breadcrumbs breadcrumbs'
+  'navigation navigation';
+
+  @screen lg {
+    grid-template-areas:
+    'logo navigation'
+    'breadcrumbs breadcrumbs';
+  }
+
+  > div#top-bar-links {
+    nav {
+      a {
+        &:hover, &:focus {
+          @apply text-primary underline;
+        }
+      }
+    }
+  }
+}
+
+.ui-top-bar__extend-button {
+  @apply inline-block lg:hidden;
+}
+
+div#top-bar-links.hidden {
+  @apply lg:flex;
+}

@@ -1,0 +1,16 @@
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Layout/ArgumentAlignment:
+  Enabled: false
+Lint/UnusedMethodArgument:
+  Enabled: false
+Style/HashEachMethods:
+  Enabled: false
+Layout/FirstArrayElementIndentation:
+  Enabled: false
+Style/Lambda:
+  Enabled: false
+Style/LambdaCall:
+  Enabled: false
+Layout/FirstHashElementIndentation:
+  Enabled: false

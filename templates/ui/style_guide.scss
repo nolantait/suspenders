@@ -1,0 +1,39 @@
+.style-guide-sidebar {
+  @apply space-y-8;
+
+  > section {
+    @apply space-y-4;
+  }
+}
+
+.style-guide-container {
+  @apply grid grid-cols-4 gap-4;
+
+  .style-guide {
+    @apply col-span-3;
+  }
+}
+
+.style-guide {
+  @apply w-full max-w-screen-lg mx-auto space-y-16 pb-32;
+}
+
+.style-guide__section {
+  @apply space-y-8;
+
+  > header {
+    @apply space-y-4;
+
+    > h1 {
+      @apply font-bold;
+    }
+  }
+}
+
+.style-guide__example {
+  @apply bg-white border shadow-sm p-8;
+
+  > header {
+    @apply mb-8;
+  }
+}

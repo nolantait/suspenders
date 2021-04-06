@@ -1,0 +1,43 @@
+.ui-collapse {
+  @apply border;
+}
+
+.ui-collapse-panel {
+  > div {
+    @apply border-t py-6 px-4;
+  }
+
+  > section.ui-collapse-panel__content {
+    @apply border-t bg-white;
+  }
+
+  > header {
+    @apply bg-gray-100 flex flex-row justify-start items-center space-x-4 p-4;
+
+    svg, i {
+      @apply transition-all duration-200;
+    }
+
+    nav.ui-actions {
+      margin-left: auto !important;
+    }
+  }
+}
+
+div.ui-collapsed {
+  svg, i {
+    transform: rotate(-90deg);
+  }
+}
+
+.ui-collapse-panel--list {
+  @apply border-0;
+
+  > header {
+    @apply bg-white space-x-4 flex flex-row justify-start items-center;
+  }
+
+  > section.ui-collapse-panel__content {
+    @apply bg-gray-100 shadow-inner;
+  }
+}

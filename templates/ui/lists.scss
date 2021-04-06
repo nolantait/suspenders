@@ -1,0 +1,29 @@
+.ui-list {
+  > header {
+    @apply flex flex-row justify-between items-center py-4;
+
+    nav.ui-actions {
+      @apply space-x-2 flex flex-row justify-end items-center;
+    }
+  }
+
+  > footer {
+    @apply flex flex-row justify-between items-center py-4;
+  }
+
+  > ul {
+    @apply divide-y bg-white border border-t;
+  }
+
+  dl {
+    @apply bg-gray-100;
+  }
+}
+
+.ui-list--borderless {
+  @apply border-0;
+
+  ul {
+    @apply bg-transparent border-0 space-y-8 divide-y-0;
+  }
+}

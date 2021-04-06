@@ -14,10 +14,10 @@ RSpec.describe "Suspend a new project with default configuration" do
       /^ruby "#{Suspenders::RUBY_VERSION}"$/o
     )
     expect(gemfile_file).to match(
-      /^gem "autoprefixer-rails"$/
+      /^gem "honeybadger"$/
     )
     expect(gemfile_file).to match(
-      /^gem "rails", "#{Suspenders::RAILS_VERSION}"$/o
+      /^gem "rails", '#{Suspenders::RAILS_VERSION}'$/o
     )
   end
 
@@ -78,10 +78,10 @@ RSpec.describe "Suspend a new project with default configuration" do
     expect(File).to exist("#{project_path}/spec/support/i18n.rb")
   end
 
-  it "creates good default .hound.yml" do
-    hound_config_file = IO.read("#{project_path}/.hound.yml")
+  it "creates good default .rubocop.yml" do
+    rubocop_config_file = IO.read("#{project_path}/.rubocop.yml")
 
-    expect(hound_config_file).to include "enabled: true"
+    expect(rubocop_config_file).to include "Enabled: true"
   end
 
   it "initializes ActiveJob to avoid memory bloat" do
@@ -274,16 +274,10 @@ RSpec.describe "Suspend a new project with default configuration" do
     expect(gemfile).to match(/sassc-rails/)
   end
 
-  it "adds and configures bourbon" do
-    gemfile = read_project_file("Gemfile")
-
-    expect(gemfile).to match(/bourbon/)
-  end
-
-  it "configures bourbon, and bitters" do
-    app_css = read_project_file(%w[app assets stylesheets application.scss])
+  it "configures tailwindcss" do
+    app_css = read_project_file(%w[app javascript stylesheets application.scss])
     expect(app_css).to match(
-      /normalize\.css\/normalize.*bourbon.*base/m
+      /tailwindcss/
     )
   end
 
