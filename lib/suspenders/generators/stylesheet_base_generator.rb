@@ -50,11 +50,11 @@ module Suspenders
     end
 
     def add_ui_stylesheets
-      base_path = "#{self.class.default_source_root}/ui"
-      Dir.entries(base_path).each do |file|
+      base_path = self.class.default_source_root
+      Dir.entries("#{base_path}/ui").each do |file|
         copy_file(
-          [base_path, file].join('/'),
-          "app/javascript/stylesheets/ui"
+          ['ui', file].join('/'),
+          "app/javascript/stylesheets/ui/#{file}"
         )
       end
     end

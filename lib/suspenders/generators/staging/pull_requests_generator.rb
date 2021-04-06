@@ -12,7 +12,7 @@ module Suspenders
       end
 
       def create_review_apps_setup_script
-        template(
+        copy_file(
           "bin_setup_review_app.erb",
           "bin/setup_review_app",
           force: true

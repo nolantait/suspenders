@@ -31,4 +31,5 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "rspec", "~> 3.2"
   s.add_development_dependency "standard"
+  s.add_development_dependency "byebug"
 end
